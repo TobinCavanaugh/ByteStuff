@@ -1,0 +1,64 @@
+* {
+    --bg: rgb(28, 28, 30);
+    --bg-dim: rgb(48, 48, 51);
+    --bg-bright: rgb(63, 63, 68);
+    --text: white;
+    --include: rgb(253, 183, 54);
+
+    background: var(--bg);
+    color: white;
+    font-family: "Eczar", serif;
+    text-align: center;
+}
+
+.include {
+    color: var(--include);
+}
+
+td, th {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, span {
+    background-color: var(--bg-bright);
+}
+
+
+table tr td {
+    color: var(--text); /* Set your desired color for text */
+}
+
+table tr:nth-child(even) td {
+    background-color: var(--bg);
+}
+
+table tr:nth-child(odd) td {
+    background-color: var(--bg-dim);
+}
+
+.narrow {
+    width: 50em;
+}
+
+.box {
+    border: 1px solid var(--bg-bright);
+    padding: 1em;
+    padding-top: 0em;
+    width: fit-content;
+    margin: auto;
+}
+
+th label {
+    background-color: var(--bg-bright);
+}

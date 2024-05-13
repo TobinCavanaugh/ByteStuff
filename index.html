@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+<main>
+
+    <h1>Helpful Byte stuff</h1>
+    <a href="https://github.com/TobinCavanaugh">Made by Tobin Cavanaugh</a>
+
+    <hr class="narrow">
+    <br>
+
+
+    <div class="flex-container box">
+
+        <h3>Integers:</h3>
+        <p class="include">#using &lt;stdint.h&gt;</p>
+
+        <table class="center values">
+            <tr>
+                <th>Keyword</th>
+                <th>Bytes</th>
+                <th>Min</th>
+                <th>Max</th>
+            </tr>
+
+            <tr>
+                <td>uint8_t</td>
+                <td>1</td>
+                <td>0</td>
+                <td>255</td>
+            </tr>
+            <tr>
+                <td>int8_t</td>
+                <td>1</td>
+                <td>-128</td>
+                <td>127</td>
+            </tr>
+
+            <tr>
+                <td>uint16_t</td>
+                <td>2</td>
+                <td>0</td>
+                <td>65335</td>
+            </tr>
+            <tr>
+                <td>int16_t</td>
+                <td>2</td>
+                <td>-32768</td>
+                <td>32767</td>
+            </tr>
+
+
+            <tr>
+                <td>uint32_t</td>
+                <td>4</td>
+                <td>0</td>
+                <td>4294967295</td>
+            </tr>
+            <tr>
+                <td>int32_t</td>
+                <td>4</td>
+                <td>-2147483648</td>
+                <td>2147483647</td>
+            </tr>
+
+            <tr>
+                <td>uint64_t</td>
+                <td>8</td>
+                <td>0</td>
+                <td>18446744073709551615</td>
+            </tr>
+            <tr>
+                <td>int64_t</td>
+                <td>8</td>
+                <td>-9223372036854775808</td>
+                <td>9223372036854775807</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <br>
+
+    <div class="flex-container box">
+        <h3>Floating Point:</h3>
+        <p class="include">#using &lt;float.h&gt;</p>
+
+        <table class="center values">
+            <tr>
+                <th>Keyword</th>
+                <th>Bytes</th>
+                <th>Min Keyword</th>
+                <th>Min</th>
+                <th>Max Keyword</th>
+                <th>Max</th>
+            </tr>
+
+            <tr>
+                <td>float</td>
+                <td>4</td>
+                <td>FLT_MIN</td>
+                <td>0</td>
+                <td>FLT_MAX</td>
+                <td>3.4028234663852999 × 10^38</td>
+            </tr>
+
+            <tr>
+                <td>double</td>
+                <td>8</td>
+                <td>DBL_MIN</td>
+                <td>0</td>
+                <td>DBL_MAX</td>
+                <td>1.7976931348623000 × 10^308</td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+
+    <div class="box">
+
+        <h3>Integer Calculator: </h3>
+
+
+        <table class="center">
+            <tr>
+                <th>
+                    <label>Bit Count:</label>
+                </th>
+                <th>
+                    <input onchange="bitchange()" type="number" id="bit_input">
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label>Byte Count:</label>
+                </th>
+
+                <th>
+                    <input onchange="bytechange()" type="number" id="byte_input">
+                </th>
+            </tr>
+
+            <p id="bit_output"></p>
+        </table>
+
+    </div>
+
+    <br>
+
+    <div class="flex-container box">
+        <h3>Bit Converter:</h3>
+
+        <table class="center">
+            <tr>
+                <th>
+                    <label>Binary:</label>
+                </th>
+                <th>
+                    <input onchange="bitenter()" type="text" id="bit_input_2">
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label>Hexadecimal:</label>
+                </th>
+                <th>
+                    <input onchange="hexenter()" type="text" id="hex_input">
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label>Integer:</label>
+                </th>
+                <th>
+                    <input onchange="uintenter()" type="number" id="uint_input">
+                </th>
+            </tr>
+
+        </table>
+    </div>
+
+    <br>
+
+    <!--- TODO: implement string stuff-->
+
+</main>
+<script src="index.js"></script>
+</body>
+</html>
