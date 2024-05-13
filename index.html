@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Website</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="script.js"></script>
+    <script type="text/javascript" src="/script.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -202,6 +202,42 @@
         <h3>Number Scale: </h3>
         <input onchange="numberscale()" type="number" id="numberscale_input">
         <p id="numberscale_output"></p>
+    </div>
+
+    <br>
+
+    <div class="flex-container box">
+        <h3>Number Notation:</h3>
+
+        <table class="center">
+            <tr>
+                <th>
+                    <label>Normal:</label>
+                </th>
+                <th>
+                    <input onchange="numberConvert()" type="number" id="num_input">
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label>E Notation:</label>
+                </th>
+                <th>
+                    <input onchange="eConvert()" type="text" id="e_input">
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label>Scientific Notation:</label>
+                </th>
+                <th>
+                    <input onchange="sciConvert()" type="text" id="sci_input">
+                </th>
+            </tr>
+        </table>
+    </div>
     </div>
 
     <!--- TODO: implement string stuff-->

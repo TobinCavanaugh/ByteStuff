@@ -47,7 +47,7 @@ function bitenter() {
 }
 
 function hexenter() {
-    document.getElementById("bit_input_2").value = Number(document.getElementById("uint_input").value).toString(2);
+    document.getElementById("bit_input_2").value = parseInt(document.getElementById("hex_input").value, 16).toString(2);
     bitenter();
 }
 
@@ -82,16 +82,69 @@ function numberscale() {
     let lastKey = Number(Object.keys(values).pop());
 
     // const closest = values.keys()
-    for(let key in values){
+    for (let key in values) {
         const a = Math.abs(input.value - key);
         const b = Math.abs(input.value - lastKey);
 
-        if(a < b){
+        if (a < b) {
             lastKey = key;
         }
     }
 
-    document.getElementById("numberscale_output").innerText = `This number is close to the ${values[lastKey]}`;
+    document.getElementById("numberscale_output").innerText = `This number is close to the ${values[lastKey]} (${lastKey})`;
+}
+
+
+function eformToSciform(eForm) {
+    const ef = "*10^"
+    return (eForm.replace("e+", ef).replace("e", ef).replace("E+", ef).replace("E", ef));
+}
+
+function sciformToNum(sciForm) {
+    const delim = ",";
+
+    let repl = sciForm.replace("x10^", delim).replace(" x 10^", delim).replace("x 10^", delim).replace(" * 10^", delim).replace("* 10^", delim).replace("*10^", delim);
+
+    const parts = repl.split(delim);
+
+    return Number(parts[0]) * (10 ** Number(parts[1]));
+}
+
+function numberConvert() {
+
+    const numInput = document.getElementById("num_input");
+    const eInput = document.getElementById("e_input");
+    const sciInput = document.getElementById("sci_input");
+
+    eInput.value = Number(numInput.value).toExponential().toString();
+    sciInput.value = eformToSciform(eInput.value);
+}
+
+
+function eConvert() {
+
+    const numInput = document.getElementById("num_input");
+    const eInput = document.getElementById("e_input");
+
+    console.log(eInput.value);
+    const e = eformToSciform(eInput.value);
+    console.log(e);
+    const parts = e.split("*10^");
+    console.log(parts.length);
+
+    numInput.value = Number(parts[0]) ** Number(parts[1]);
+
+    numberConvert();
+}
+
+function sciConvert() {
+    const numInput = document.getElementById("num_input");
+    const sciInput = document.getElementById("sci_input");
+
+    console.log(sciformToNum(sciInput.value));
+    numInput.value = sciformToNum(sciInput).toString();
+
+    numberConvert();
 }
 
 // function sintenter() {
