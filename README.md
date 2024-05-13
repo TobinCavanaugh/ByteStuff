@@ -1,11 +1,11 @@
 # ByteTools
 #### A collection of tools for dealing with binary data, particularly related to C.
 
+---
+
 ### C Integers
 The sizes of standard C integers, their mins and maxes.
-
 ![](gh/screenshot_int.png)
-
 
 ### C Floating Points
 The sizes of standard C floats, their mins and maxes.
@@ -17,7 +17,7 @@ Calculate the hypothetical mins and maxes of integers with any bit counts.
 
 ### Bit Converter
 Convert to and from binary, hexadecimal, and integers.
-![](gh/screenshot_bitconv.png)
+![](gh/screenshot_bitcon.png)
 
 ### Number Scale
 Put numbers into scale by comparing them to values in our universe.
