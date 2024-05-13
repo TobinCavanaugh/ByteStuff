@@ -20,10 +20,10 @@ function bitchange() {
 
     document.getElementById("bit_output").innerText =
         `Min Unsigned: 0
-        Max Unsigned: ${BigInt(2 ** bits - 1)}
+        Max Unsigned: ${BigInt(2 ** bits - 1).toString()}
         ---
-        Min Signed: ${BigInt(-(2 ** (bits - 1)))}
-        Max Signed: ${BigInt(2 ** (bits - 1) - 1)}`;
+        Min Signed: ${BigInt(-(2 ** (bits - 1))).toString()}
+        Max Signed: ${BigInt(2 ** (bits - 1) - 1).toString()}`;
 }
 
 function bytechange() {
