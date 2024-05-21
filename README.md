@@ -1,5 +1,6 @@
 # ByteTools
 #### A collection of tools for dealing with binary data, particularly related to C.
+https://tobincavanaugh.github.io/ByteStuff/
 
 ---
 
